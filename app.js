@@ -12,6 +12,20 @@
 
 // console.log(result);
 
+
+
+// function outer(a){
+//   function inner(b){
+//     let z = a+b;
+//     return z;
+//   }
+//   return inner;
+// }
+
+// let outerResult = outer(2)
+
+// console.log(outerResult(4));
+
 //1
 
 let name = "Kowsar";
@@ -238,3 +252,138 @@ function capitalizeName (stringName){
 
 }
 console.log(capitalizeName(stringName));
+
+//20
+
+
+function outerFunction (){
+    let message = "Hello";
+    function innerFunction(){
+          return message;
+    }
+    let inner = innerFunction ;
+    return inner;
+}
+
+let call = outerFunction();
+
+console.log(call())
+
+//21
+
+let card = [];
+
+function shoppingCard (item){
+    card.push(item)
+}
+
+shoppingCard("Apples1")
+
+shoppingCard("Apples2")
+console.log(card);
+
+//22
+
+const numbers = [10,20,30];
+function  removeNumber (num){
+    numbers.pop(num)  
+}
+removeNumber(num);
+console.log(numbers);
+
+//23
+
+const queue = ["Anya","Ben","Chloe"];
+
+function removeFront  (names){
+    queue.shift(names);
+}
+removeFront();
+console.log(queue)
+
+//24
+
+const queue1 = ["Ben","Chloe"];
+let name1 = "VIP Customer"
+function addName (name1){
+    queue1.unshift(name1)
+}
+addName(name1);
+console.log(queue1);
+
+//25
+
+ const movies = ["Dune", "Arrival", "Interstellar"];
+
+ function forOFLoop (){
+    let s = "";
+    for(let movie of movies){
+       s += movie +` `;
+       
+    }
+    return s ;
+ }
+
+console.log(forOFLoop());
+
+//26
+
+const inventory = { apples: 5, bananas: 10, oranges: 3 };
+
+function forInLoop (){
+    let s = "";
+    for(let inven in inventory){
+         s += inven + ` `;
+    }
+    return s;
+}
+console.log(forInLoop())
+
+//27
+
+const inventory1 = { apples: 5, bananas: 10 };
+
+ function forInLoop1 (){
+    let s = "";
+    for(let inven in inventory1){
+         s += `${inventory1[inven]}\n`;
+    }
+    return s;
+}
+console.log(forInLoop1())
+
+//28
+
+const originalScores = [100, 90, 80];
+
+function saveGame (){
+   let newScores = originalScores.slice();
+   return newScores;
+}
+console.log(saveGame());
+
+//29
+
+const allScores = [100, 90, 85,80, 70, 60];
+
+function scores (){
+    let allScore = allScores.slice(0,3)
+    return allScore;
+}
+console.log(scores());
+
+
+//30
+
+const data = [5, 12, 3, 22, 8];
+const filtered = [];
+function filterList (){
+    for(let info of data){
+        if(info>10){
+            filtered.push(info)
+        }
+    }
+}
+filterList();
+console.log(filtered)
+
