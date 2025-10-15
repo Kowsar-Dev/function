@@ -451,3 +451,40 @@
 // sendMessage(user2, msgSend)
 
 
+// let user = {
+//     name : "ridoy",
+//     roll : "668829",
+//     phone : "01605167308",
+// }
+
+// function changeName(user , name ,phone) {
+// let change = {...user , name,phone}
+//     return change;
+
+// }
+// let result = changeName(user, "kawsar","01522112387");
+// console.log(result);
+// console.log(user);
+
+
+// let user = {
+//   name : "ridoy",
+//   roll : 668829,
+//   phone : "01605167308",
+// };
+
+// function changeName(user , name ,roll, phone = user.phone ) {
+//   let change = { ...user , name , phone,roll };
+//   return change;
+// }
+
+// let user4 = {
+//   nam1 () {
+//     return changeName(user , "kowsar" ,658787, "01522112387" );
+//   }
+// };
+
+// console.log(user);
+
+// console.log(user4.nam1());
+
