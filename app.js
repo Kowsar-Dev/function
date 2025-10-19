@@ -810,3 +810,176 @@
  
 // idSet.delete(10);
 // console.log(idSet);
+
+// // 16 Create a new Set named colorSet using an array containing duplicates: ["Red", "Blue", "Red"].
+
+// let  colors = ["Red", "Blue", "Red"];
+// const colorSet = new Set(colors);
+// console.log(colorSet);
+
+// 17 cnvert the colorSet back into a regular array named uniqueColorsArray.
+// let colorSet = new Set(["Red", "Blue", "Red"]);
+// let uniqueColorsArray = [...colorSet];
+// console.log(uniqueColorsArray);
+
+// // 18 Use the method to remove all elements from colorSet.
+
+// let nameSet = new Set(['shamim','kawsar','shamim']);
+// nameSet.clear();
+// console.log(nameSet);
+// console.log(nameSet.size);
+
+//  // 19 Use a for...of loop to print every element in the colorSet.
+// let nameSet = new Set(['shamim', 'kawsar', 'rafi']);
+// for(let name of nameSet){
+//     console.log(name);
+
+// }
+
+// // 20 Create a function getUniqueWords(sentence) that uses a Set to find and return the count of unique words.
+
+// function getUniqueWords(sentence) {
+//   let words = sentence.split(" ");
+//   let uniqueWordsSet = new Set(words);
+//   return uniqueWordsSet.size;
+// }
+
+// const sentence = "hello world hello everyone";
+// console.log(getUniqueWords(sentence));
+
+// // 21 Write a try...catch block. In try, intentionally call an undefined function like throwError().
+
+// try {
+//   throweror();
+// } catch (error) {
+//   console.log("Error caught:" + error.massage);
+
+// }
+// console.log("Program continues....");
+
+// // 22 In the catch block from C21, print the error.message to see what went wrong.
+
+// try {
+//   throwError();
+// } catch (error) {
+//       console.log(error.message);
+// }
+// console.log("Program continues...");
+
+// // 23 Write a function checkAge(age) that uses an if statement to manually throw new Error(...) if age is less than 18.
+
+// function checkAge(age) {
+//   if (age < 18) {
+//     throw new Error("Age must be at least 18!")
+//   }
+//   return "Age is fine"
+// }
+// try {
+//   console.log(checkAge(16));
+
+// } catch (error) {
+//   console.log("Error caught:" + error.masseg);
+
+// }
+// try {
+//   console.log(checkAge(20));
+
+// } catch (error) {
+//   console.log("error caught:" + error.masseg);
+
+// }
+
+// // 24 Use try...catch to call checkAge(16) and handle the "Too young" error gracefully.
+// function checkAge(age) {
+//     if (age < 18) {
+//         throw new Error("Too young! Age must be at least 18.");
+//     }
+//     return "Age is fine.";
+// }
+
+// try {
+//     console.log(checkAge(16));
+// } catch (error) {
+//     console.log("Error caught: " + error.message);
+// }
+
+// console.log("Program continues...");
+
+//  // 25 Try to parse the invalid JSON string: "{'name': 'Bob'". Catch the error if parsing fails.
+// let invalidJson = ("{'name': 'Bob'}");
+
+// try {
+//     const data = JSON.parse(invalidJson);
+//     console.log(data);
+// } catch (error) {
+//     console.log("Parsing failed: " + error.message);
+// }
+
+// console.log("Program continues...");
+
+// // 26 Add a finally block to C25 that always prints "Attempt complete." regardless of the result.
+// let invalidJson = "{'name':'Bob'}";
+// try {
+//   let data = JSON.parse(invalidJson);
+//   console.log(data);
+// } catch (error) {
+//   console.log(error.message);
+// } finally {
+//   console.log("Attempt");
+// }
+// console.log("continues....");
+
+// // 27 Write a try...catch block where the try block succeeds (e.g., prints "Success!"). Show that catch is skipped.
+// try {
+//     console.log("Success!");
+// } catch (error) {
+//     console.log("This will not run.");
+// } finally {
+//     console.log("Finally block executed.");
+// }
+
+// //  28 Create a loop that calls a function. Wrap the call in try...catch so that if one item fails, the loop continues.
+// Example function যা偶তো error throw করতে পারে
+// function processItem(item) {
+//     if (item < 0) {
+//         throw new Error("Negative value not allowed: " + item);
+//     }
+//     console.log("Processed item: " + item);
+// }
+// const items = [5, -2, 10, -7, 8];
+// for (const item of items) {
+//     try {
+//         processItem(item);
+//     } catch (error) {
+//         console.log("Error caught: " + error.message);
+//     }
+// }
+// console.log("Loop continues...");
+
+// // 29 Write a function process(input) that checks if the input is a number. If not, throw an error.
+// function process(input) {
+//     if (typeof input !== "number") {
+//         throw new Error("Input must be a number!");
+//     }
+//     return input * 2;
+// }
+// try {
+//     console.log(process(10));
+//     console.log(process("hello"));
+// } catch (error) {
+//     console.log("Error caught: " + error.message);
+// }
+
+// // 30 Use try...catch to call process("hello"). In catch, print the error, but then print a message that the program is continuing.
+// function process(input) {
+//     if (typeof input !== "number") {
+//         throw new Error("Input must be a number!");
+//     }
+//     return input * 2;
+// }
+// try {
+//     console.log(process("hello"));
+// } catch (error) {
+//     console.log("Error caught: " + error.message);
+// }
+// console.log("Program is continuing...");
